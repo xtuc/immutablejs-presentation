@@ -1,0 +1,16 @@
+<h3>Vous savez comment mais pourquoi ?</h3>
+
+<ul>
+	<li>Plus facile à écrire et à comprendre</li>
+	<li>Contrôler ces effets de bords</li>
+	<li>Performances (partage de structure, comparaison de référence, ...)</li>
+	<li>Plus simple à tester</li>
+	<li>Evaluation paraisseuse (lazy)</li>
+</ul>
+
+<p>
+	JavaScript map, slice, splice, ... crée une copy complete des données "deep copy".
+
+Immutable JS map, slice, ... crée une copy superficielle des données "shallow copy". Les données inchangés sont partagé en mémoire (pointe vers la meme adresse).
+L'avantage de la copie superficielle est que sa vitesse de exécution est rapide et ne dépend pas de la taille de la donnée.
+</p>

@@ -1,0 +1,25 @@
+<h3>Immutable Record</h3>
+
+<pre><code class="js" data-trim data-noescape>
+import Immutable from "immutable";
+
+class HttpResponse extends Immutable.Record({
+	statusCode: 200,
+	content: "",
+	headers: Immutable.Map()
+})
+</code></pre>
+
+<pre><code class="js" data-trim data-noescape>
+var headers = Immutable.Map({ "Content-Type": "text/plain" });
+var foo = new HttpResponse()
+		.set("statusCode", 404)
+		.set("content", "Page not found")
+		.set("headers", headers);
+
+<small>// HttpResponse {
+//	"statusCode": 404,
+//	"content": "Page not found",
+//	"headers": Map { "Content-Type": "text/plain" }
+// }</small>
+</code></pre>

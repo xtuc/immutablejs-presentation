@@ -1,0 +1,24 @@
+<h3>Gain de performance</h3>
+
+<h4>Comparez uniquement la référence</h4>
+
+<pre><code class="js" data-trim data-noescape>
+var myList1 = Immutable.List([…]); // Référence #1 dans la mémoire
+var myList2 = Immutable.List([…]); // Référence #2 dans la mémoire
+</code></pre>
+
+<pre><code class="js" data-trim data-noescape>
+assert(myList1 === myList2)
+</code></pre>
+
+<p>
+	Cela revient à faire
+</p>
+
+<pre><code class="js" data-trim data-noescape>
+assert(1 === 2)
+</code></pre>
+
+<p>
+	Qui est plus rapide que de devoir comparer toutes les valeurs de l'object
+</p>

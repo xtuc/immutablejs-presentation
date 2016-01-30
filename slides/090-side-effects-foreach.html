@@ -1,0 +1,18 @@
+<h3>Contrôler vos effects de bords</h3>
+
+<pre><code class="js" data-trim data-noescape>
+var myUsersList = Immutable.List.of("Sven", "Robert", "Jean");
+</code></pre>
+
+<pre><code class="js" data-trim data-noescape>
+var persist = (firstname) => {
+    if(firstname === "Robert") return false; // Règle métier
+    …
+}
+
+myUsersList.forEach(persist); <small>// Retour l'emplacement du cursor dans la liste</small>
+</code></pre>
+
+<p>
+    forEach va continer tant que la fonction persist renvoit true.
+</p>

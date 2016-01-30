@@ -1,0 +1,22 @@
+<h3>Immutable List</h3>
+
+<pre><code class="js" data-trim data-noescape>
+var foo = Immutable.List([
+	"lundi",
+	"mardi",
+	"mercredi",
+	"jeudi",
+	"vendredi",
+	"samedi",
+	"dimanche"
+]);
+</code></pre>
+
+<pre><code class="js" data-trim data-noescape>
+foo = foo.push("samedi") <small>// Ajoute l'élement "samedi" à la suite de la liste</small>
+foo = foo.filter(x => x !== "lundi") <small>// Applique un filtre à la liste (jour !== lundi)</small>
+</code></pre>
+
+<pre><code class="js" data-trim data-noescape>
+foo.toJS() <small>// Array ["mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche", "samedi"]</small>
+</code></pre>

@@ -1,0 +1,16 @@
+<h4>Batch mutations</h4>
+
+<pre><code class="js" data-trim data-noescape>
+var foo = Immutable.List.of(1, 2, 3, 4);
+
+var bar = foo.withMutations(mutable => {
+    // mutable est une copy temporaire de foo
+
+    mutable
+        .push(5)
+        .push(6)
+        .push(7);
+});
+
+// Array [1, 2, 3, 4, 5, 6, 7]
+</code></pre>

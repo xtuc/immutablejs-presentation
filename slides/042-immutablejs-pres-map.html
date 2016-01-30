@@ -1,0 +1,23 @@
+<h3>Immutable Map</h3>
+
+<pre><code class="js" data-trim data-noescape>
+var foo = Immutable.Map({
+	lundi: "Mcdonald's",
+	mardi: "Gauffre (Waffle Factory)",
+	mercredi: "Sandwitch",
+	jeudi: "Pizza",
+	vendredi: "Mcdonald's",
+	samedi: null,
+	dimanche: null
+});
+</code></pre>
+
+<pre><code class="js" data-trim data-noescape>
+foo.get("jeudi") <small>// Récupère la valeur "Pizza"</small>
+foo.set("samedi", "Pizza") <small>// La valeur de la clé "samedi" est "Pizza"</small>
+</code></pre>
+
+<pre><code class="js" data-trim data-noescape>
+foo.toJS() <small>// Object {lundi: "Mcdonald's", mardi: "Gauffre (...)", mercredi: "Sandwitch", jeudi: "Pizza", 
+// vendredi: "Mcdonald's", samedi: "Pizza", dimanche: null}</small>
+</code></pre>
