@@ -1,0 +1,17 @@
+<h4>Votre code change</h4>
+
+<pre><code class="js" data-trim data-noescape>
+var foo = Immutable.List.of(1, 2, 3);
+
+foo[2] = "bar";
+</code></pre>
+
+<p>
+	<i class="fa fa-arrow-down"></i>
+</p>
+
+<pre><code class="js" data-trim data-noescape>
+var foo = Immutable.List.of(1, 2, 3);
+
+foo = foo.set(2, "bar") // List [ 1, 2, "bar" ]
+</code></pre>

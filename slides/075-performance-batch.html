@@ -4,7 +4,7 @@
 var foo = Immutable.List.of(1, 2, 3, 4);
 
 var bar = foo.withMutations(mutable => {
-    // mutable est une copy temporaire de foo
+	// mutable est une copy superficielle et temporaire de foo
 
     mutable
         .push(5)

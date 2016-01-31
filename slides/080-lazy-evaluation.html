@@ -7,5 +7,5 @@ var oddSquares = Immutable.List.of(1,2,3,4,5,6,7,8)
                                 .map(x => x * x);
 
 // Only calls filter twice and map once
-console.log(oddSquares.last()); // 49
+oddSquares.get(1); // 9
 </code></pre>

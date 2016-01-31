@@ -1,7 +1,0 @@
-Immutable JS typescript et délcaration comptabible flowtype
-
-utilis methods :
- ☐ fromJS
- ☐ is
- ☐ range
- ☐ repeat

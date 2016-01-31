@@ -1,7 +1,7 @@
 <h3>Contrôler vos effects de bords</h3>
 
 <pre><code class="js" data-trim data-noescape>
-var myUsersList = Immutable.List.of("Sven", "Robert", "Jean");
+var myUsersList = Immutable.List.of("Paul", "Robert", "Jean");
 </code></pre>
 
 <pre><code class="js" data-trim data-noescape>
@@ -14,5 +14,5 @@ myUsersList.forEach(persist); <small>// Retour l'emplacement du cursor dans la l
 </code></pre>
 
 <p>
-    forEach va continer tant que la fonction persist renvoit true.
+    forEach va s'arreter si la fonction persist renvoit false contrairement a Array.map.
 </p>

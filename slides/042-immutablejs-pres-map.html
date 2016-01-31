@@ -1,9 +1,9 @@
-<h3>Immutable Map</h3>
+<h3>Tableau associative</h3>
 
 <pre><code class="js" data-trim data-noescape>
 var foo = Immutable.Map({
 	lundi: "Mcdonald's",
-	mardi: "Gauffre (Waffle Factory)",
+	mardi: "Resto",
 	mercredi: "Sandwitch",
 	jeudi: "Pizza",
 	vendredi: "Mcdonald's",
@@ -13,11 +13,11 @@ var foo = Immutable.Map({
 </code></pre>
 
 <pre><code class="js" data-trim data-noescape>
-foo.get("jeudi") <small>// Récupère la valeur "Pizza"</small>
-foo.set("samedi", "Pizza") <small>// La valeur de la clé "samedi" est "Pizza"</small>
+var bar = foo.get("jeudi") <small>// Récupère la valeur "Pizza"</small>
+var foo = foo.set("samedi", "Pizza") <small>// La valeur de la clé "samedi" est "Pizza"</small>
 </code></pre>
 
 <pre><code class="js" data-trim data-noescape>
-foo.toJS() <small>// Object {lundi: "Mcdonald's", mardi: "Gauffre (...)", mercredi: "Sandwitch", jeudi: "Pizza", 
+foo.toJS() <small>// Object {lundi: "Mcdonald's", mardi: "Resto", mercredi: "Sandwitch", jeudi: "Pizza", 
 // vendredi: "Mcdonald's", samedi: "Pizza", dimanche: null}</small>
 </code></pre>
