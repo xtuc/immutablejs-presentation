@@ -5,8 +5,8 @@ var myUsersList = Immutable.List.of("Paul", "Robert", "Jean");
 </code></pre>
 
 <pre><code class="js" data-trim data-noescape>
-var persist = (firstname) => {
-    if(firstname === "Robert") return false; // Règle métier
+var persist = (user) => {
+    if(user === "Robert") return false; // Règle métier
     …
 }
 
@@ -14,5 +14,5 @@ myUsersList.forEach(persist); <small>// Retour l'emplacement du cursor dans la l
 </code></pre>
 
 <p>
-    forEach va s'arreter si la fonction persist renvoit false contrairement a Array.map.
+    forEach va s'arreter si la fonction persist renvoit false contrairement à Array.map.
 </p>

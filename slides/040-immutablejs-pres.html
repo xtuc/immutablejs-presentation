@@ -8,14 +8,14 @@ npm i <strong>immutable</strong>
 <pre><code class="js" data-trim data-noescape>
 import Immutable from "Immutable";
 
-var myList   = Immutable.<strong>List</strong>();
-var myMap    = Immutable.<strong>Map</strong>();
-var mySet    = Immutable.<strong>Set</strong>();
-var myStack  = Immutable.<strong>Stack</strong>();
-var myRecord = Immutable.<strong>Record</strong>();
-var mySeq    = Immutable.<strong>Seq</strong>();
+var myList         = Immutable.<strong>List</strong>(); // Liste
+var myMap          = Immutable.<strong>Map</strong>(); // Tableau associatif
+var myStack        = Immutable.<strong>Stack</strong>(); // Tableau
+var myRecord       = Immutable.<strong>Record</strong>(); // Classe
+var mySeq          = Immutable.<strong>Seq</strong>(); // Séquence de valeurs
 </code></pre>
 
 <pre><code class="js" data-trim data-noescape>
-var myObj    = Immutable.<strong>fromJS<strong>(); <small>// Transforme un objet/tableau JS en Immutable List/Map</small>
+var myImmutalbeObj = Immutable.<strong>fromJS<strong>(); <small>// Transforme un objet/tableau JS en Immutable List/Map</small>
+var myObj = myImmutalbeObj.<strong>toJS<strong>(); <small>// Function inverse</small>
 </code></pre>

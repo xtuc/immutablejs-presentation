@@ -3,10 +3,8 @@
 <pre><code class="js" data-trim data-noescape>
 var foo = Immutable.Map({
 	lundi: "Mcdonald's",
-	mardi: "Resto",
-	mercredi: "Sandwitch",
-	jeudi: "Pizza",
-	vendredi: "Mcdonald's",
+	…
+	vendredi: "Pizza",
 	samedi: null,
 	dimanche: null
 });
@@ -14,10 +12,12 @@ var foo = Immutable.Map({
 
 <pre><code class="js" data-trim data-noescape>
 var bar = foo.get("jeudi") <small>// Récupère la valeur "Pizza"</small>
-var foo = foo.set("samedi", "Pizza") <small>// La valeur de la clé "samedi" est "Pizza"</small>
+foo = foo.set("samedi", "Pizza") <small>// La valeur de la clé "samedi" est "Pizza"</small>
+var fooValues = foo.values() <small>// Retourne une liste de toutes les valeurs</small>
+var fooHasValue = foo.has("mardi") <small>// Vérifier que la clé "mardi" exists</small>
 </code></pre>
 
-<pre><code class="js" data-trim data-noescape>
+<!-- <pre><code class="js" data-trim data-noescape>
 foo.toJS() <small>// Object {lundi: "Mcdonald's", mardi: "Resto", mercredi: "Sandwitch", jeudi: "Pizza", 
 // vendredi: "Mcdonald's", samedi: "Pizza", dimanche: null}</small>
-</code></pre>
+</code></pre> -->
