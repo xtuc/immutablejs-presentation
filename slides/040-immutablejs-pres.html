@@ -7,14 +7,18 @@ npm i <strong>immutable</strong>
 <pre><code class="js" data-trim data-noescape>
 import Immutable from "Immutable";
 
-var myList         = Immutable.<strong>List</strong>(); // Liste
-var myMap          = Immutable.<strong>Map</strong>(); // Tableau associatif
-var myStack        = Immutable.<strong>Stack</strong>(); // Tableau
-var myRecord       = Immutable.<strong>Record</strong>(); // Classe
-var mySeq          = Immutable.<strong>Seq</strong>(); // Séquence de valeurs
+var list         = Immutable.<strong>List</strong>();
+var map          = Immutable.<strong>Map</strong>();
+var stack        = Immutable.<strong>Stack</strong>();
+var record       = Immutable.<strong>Record</strong>();
+var seq          = Immutable.<strong>Seq</strong>();
 </code></pre>
 
 <pre><code class="js" data-trim data-noescape>
-var myImmutalbeObj = Immutable.<strong>fromJS<strong>(); <small>// Transforme un objet/tableau JS en Immutable List/Map</small>
-var myObj = myImmutalbeObj.<strong>toJS<strong>(); <small>// Function inverse</small>
+var immutalbeObj = Immutable.<strong>fromJS</strong>({ … });
+var obj          = myImmutalbeObj.<strong>toJS</strong>();
 </code></pre>
+
+<aside class="notes">
+	list = liste, map = Tableau associatif, stack = Tableau, record = classe, seq = séquence de valeurs, fromjs = // Transforme un objet/tableau JS en Immutable List/Map, tojs = inverse
+</aside>

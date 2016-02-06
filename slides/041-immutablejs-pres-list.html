@@ -10,13 +10,17 @@ var foo = Immutable.List([
 </code></pre>
 
 <pre><code class="js" data-trim data-noescape>
-var bar = foo.get(2) <small>// Recupérer la deuxième valeur</small>
-foo = foo.push("samedi") <small>// Ajoute l'élement "samedi" à la suite de la liste</small>
-foo = foo.filter(x => x !== "lundi") <small>// Applique un filtre à la liste (jour !== lundi)</small>
-foo = foo.merge(foo²) <small>// Fusionne deux listes</small>
-foo = foo.sort() <small>// Ordonner la liste</small>
+var bar = foo.get(2) <!-- <small>// Récupérer la deuxième valeur</small> -->
+foo = foo.push("samedi") <!-- <small>// Ajoute l'élement "samedi" à la suite de la liste</small> -->
+foo = foo.filter(x => x !== "lundi") <!-- <small>// Applique un filtre à la liste (jour !== lundi)</small> -->
+foo = foo.merge(foo²) <!-- <small>// Fusionne deux listes</small> -->
+foo = foo.sort() <!-- <small>// Ordonner la liste</small> -->
 </code></pre>
 <!-- 
 <pre><code class="js" data-trim data-noescape>
 foo.toJS() <small>// Array ["mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche", "samedi"]</small>
 </code></pre> -->
+
+<aside class="notes">
+	Push, sort comme dans lib standart, filter sert a filtrer, merge merger, sort ordonner
+</aside>

@@ -1,0 +1,20 @@
+<h3>Modifiez votre code</h3>
+
+<pre><code class="js" data-trim data-noescape>
+var user = { firstname: "Dennis", lastname: "Ritchie" };
+
+user.firstname = "foo";
+</code></pre>
+
+<p>
+    <i class="fa fa-arrow-down"></i>
+</p>
+
+<pre><code class="js" data-trim data-noescape>
+var user = Immutable.Map({
+    firstname: "Dennis",
+    lastname: "Ritchie"
+});
+
+user = user.set("firstname", "foo");
+</code></pre>

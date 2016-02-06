@@ -1,0 +1,33 @@
+<pre><code class="js" data-trim data-noescape>
+var user = { firstname: "foo", lastname: "bar", password: "x" }
+</code></pre>
+
+<p>
+    sans
+</p>
+
+<pre><code class="js" data-trim data-noescape>
+var connectedUser = user.firstname.toUpperCase();
+    connectedUser += ", ";
+    connectedUser += user.lastname.toUpperCase();
+</code></pre>
+
+<p>
+    avec
+</p>
+
+
+<pre><code class="js" data-trim data-noescape>
+var connectedUser = user
+                        .filterNot((v, k) => k === "password")
+                        .map(x => x.toUpperCase())
+                        .join(", ")
+</code></pre>
+
+<aside class="notes">
+    Le but est d'afficher un string NOM, Prenom (en upercase) de l'utilisateur sans son mot de passe
+    <br />
+    Il ne faut surtout pas modifier l'utilisateur tout en haut.
+    <br />
+    Dans le second cas l'utilisateur doit etre une immutable map. On peut utiliser le method fromJS
+</aside>

@@ -1,4 +1,4 @@
-<h3>Tableau associative</h3>
+<h3>Tableau associatif</h3>
 
 <pre><code class="js" data-trim data-noescape>
 var foo = Immutable.Map({
@@ -11,13 +11,17 @@ var foo = Immutable.Map({
 </code></pre>
 
 <pre><code class="js" data-trim data-noescape>
-var bar = foo.get("jeudi") <small>// Récupère la valeur "Pizza"</small>
-foo = foo.set("samedi", "Pizza") <small>// La valeur de la clé "samedi" est "Pizza"</small>
-var fooValues = foo.values() <small>// Retourne une liste de toutes les valeurs</small>
-var fooHasValue = foo.has("mardi") <small>// Vérifier que la clé "mardi" exists</small>
+var bar = foo.get("jeudi") <!-- <small>// Récupère la valeur "Pizza"</small> -->
+foo = foo.set("samedi", "Pizza") <!-- <small>// La valeur de la clé "samedi" est "Pizza"</small> -->
+var fooValues = foo.values() <!-- <small>// Retourne une liste de toutes les valeurs</small> -->
+var fooHasValue = foo.has("mardi") <!-- <small>// Vérifier que la clé "mardi" exists</small> -->
 </code></pre>
 
 <!-- <pre><code class="js" data-trim data-noescape>
 foo.toJS() <small>// Object {lundi: "Mcdonald's", mardi: "Resto", mercredi: "Sandwitch", jeudi: "Pizza", 
 // vendredi: "Mcdonald's", samedi: "Pizza", dimanche: null}</small>
 </code></pre> -->
+
+<aside class="notes">
+	has() tester si la clé existe, values() retourne une liste des valeurs
+</aside>

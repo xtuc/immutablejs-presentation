@@ -1,25 +1,8 @@
 import Immutable from "immutable"
 
-export default class IPv4Packet extends Immutable.Record({
-	Version: 4,
-	IPHeaderLength: null,
-	TypeofService: null,
-	SizeofDatagram: null,
-	Identification: null,
-	Flags: null,
-	FragmentationOffset: null,
-	TimeToLive: null,
-	Protocol: null,
-	HeaderChecksum: null,
-	SourceAddress: null,
-	DestinationAddress: null
-}) {
-	//
-}
+var oddSquares = Immutable.List.of(1,2,3,4,5,6,7,8)
+                                .filter(x => x % 2)
+                                .map(x => x * x);
 
-var res = new IPv4Packet()
-				.set("Version", 5);
-
-var resJSON = res.toJSON();
-
-console.log(new IPv4Packet(resJSON));
+// Only calls filter twice and map once
+console.log(oddSquares.get(1)); // 9

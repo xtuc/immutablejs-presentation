@@ -1,0 +1,29 @@
+<pre><code class="js" data-trim data-noescape>
+var user = { }
+</code></pre>
+
+<p>
+    sans
+</p>
+
+<pre><code class="js" data-trim data-noescape>
+var connectedUser = user<span class="text-danger">.firstname.toUpperCase();</span>
+    connectedUser += ", ";
+    connectedUser += user<span class="text-danger">.lastname.toUpperCase();</span>
+</code></pre>
+
+<p>
+    avec
+</p>
+
+
+<pre><code class="js" data-trim data-noescape>
+var connectedUser = user
+                        .filterNot((v, k) => k === "password")
+                        .map(x => x.toUpperCase())
+                        .join(", ")
+</code></pre>
+
+<aside class="notes">
+	Si l'utilisateur est null (comme dab en JS) ça casse le script sans. Le rouge c'est une erreur JS, cannot readt property toUpper… of undefined
+</aside>
