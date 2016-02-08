@@ -1,20 +1,20 @@
 <h3>Tableau associatif</h3>
 
 <pre><code class="js" data-trim data-noescape>
-var foo = Immutable.Map({
-	lundi: "Mcdonald's",
-	…
-	vendredi: "Pizza",
-	samedi: null,
-	dimanche: null
+const foo = Immutable.Map({
+    lundi: "Mcdonald's",
+        …
+    vendredi: "Pizza",
+    samedi: null,
+    dimanche: null
 });
 </code></pre>
 
 <pre><code class="js" data-trim data-noescape>
-var bar = foo.get("jeudi") <!-- <small>// Récupère la valeur "Pizza"</small> -->
-foo = foo.set("samedi", "Pizza") <!-- <small>// La valeur de la clé "samedi" est "Pizza"</small> -->
-var fooValues = foo.values() <!-- <small>// Retourne une liste de toutes les valeurs</small> -->
-var fooHasValue = foo.has("mardi") <!-- <small>// Vérifier que la clé "mardi" exists</small> -->
+const bar         = foo.get("jeudi") <!-- <small>// Récupère la valeur "Pizza"</small> -->
+const foo1        = foo.set("samedi", "Pizza") <!-- <small>// La valeur de la clé "samedi" est "Pizza"</small> -->
+const fooValues   = foo.values() <!-- <small>// Retourne une liste de toutes les valeurs</small> -->
+const fooHasValue = foo.has("mardi") <!-- <small>// Vérifier que la clé "mardi" exists</small> -->
 </code></pre>
 
 <!-- <pre><code class="js" data-trim data-noescape>
@@ -23,5 +23,5 @@ foo.toJS() <small>// Object {lundi: "Mcdonald's", mardi: "Resto", mercredi: "San
 </code></pre> -->
 
 <aside class="notes">
-	has() tester si la clé existe, values() retourne une liste des valeurs
+    has() tester si la clé existe, values() retourne une liste des valeurs
 </aside>

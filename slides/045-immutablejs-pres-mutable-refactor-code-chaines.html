@@ -1,5 +1,5 @@
 <pre><code class="js" data-trim data-noescape>
-var user = { firstname: "foo", lastname: "bar", password: "x" }
+const user = { firstname: "foo", lastname: "bar", password: "x" }
 </code></pre>
 
 <p>
@@ -7,9 +7,9 @@ var user = { firstname: "foo", lastname: "bar", password: "x" }
 </p>
 
 <pre><code class="js" data-trim data-noescape>
-var connectedUser = user.firstname.toUpperCase();
-    connectedUser += ", ";
-    connectedUser += user.lastname.toUpperCase();
+const connectedUser = user.firstname.toUpperCase();
+      connectedUser += ", ";
+      connectedUser += user.lastname.toUpperCase();
 </code></pre>
 
 <p>
@@ -18,7 +18,7 @@ var connectedUser = user.firstname.toUpperCase();
 
 
 <pre><code class="js" data-trim data-noescape>
-var connectedUser = user
+const connectedUser = user
                         .filterNot((v, k) => k === "password")
                         .map(x => x.toUpperCase())
                         .join(", ")

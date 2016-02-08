@@ -13,9 +13,9 @@ class HttpResponse extends Immutable.Record({
 </code></pre>
 
 <pre><code class="js" data-trim data-noescape>
-var headers = Immutable.Map({ "Content-Type": "text/plain" });
+const headers = Immutable.Map({ "Content-Type": "text/plain" });
 
-var foo = new HttpResponse()
+const foo = new HttpResponse()
 		.set("statusCode", 404)
 		.set("content", "Page not found")
 		.set("headers", headers);

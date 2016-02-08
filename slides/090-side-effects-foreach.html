@@ -1,11 +1,11 @@
 <h3>Contrôler vos effects de bords</h3>
 
 <pre><code class="js" data-trim data-noescape>
-var myUsersList = Immutable.List.of("Paul", "Robert", "Jean");
+const myUsersList = Immutable.List.of("Paul", "Robert", "Jean");
 </code></pre>
 
 <pre><code class="js" data-trim data-noescape>
-var persist = (user) => {
+const persist = (user) => {
     if(user === "Robert") return false; // Règle métier
     …
 }

@@ -1,9 +1,9 @@
 <h4>Modifications en lot</h4>
 
 <pre><code class="js" data-trim data-noescape>
-var foo = Immutable.List.of(1, 2, 3, 4);
+const foo = Immutable.List.of(1, 2, 3, 4);
 
-var bar = foo.withMutations(mutable => {
+const bar = foo.withMutations(mutable => {
 	// mutable est une copy superficielle et temporaire de foo
 
     mutable

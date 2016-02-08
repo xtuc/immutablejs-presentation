@@ -1,19 +1,19 @@
 <h4>Structure de données comme type</h4>
 
 <pre><code class="js" data-trim data-noescape>
-class IPv4Packet extends Immutable.Record({
+class IPPacket extends Immutable.Record({
     Version: 4,
-    …
+        …
     SourceAddress: null,
     DestinationAddress: null
 }) {
     //
 }
 
-var packet = new IPv4Packet()
-                .set("Version", 6);
+const packet = new IPPacket()
+                    .set("Version", 6);
 
-var data = packet.toJSON();
+const data = packet.toJSON();
 </code></pre>
 
 <p>
@@ -21,7 +21,7 @@ var data = packet.toJSON();
 </p>
 
 <pre><code class="js" data-trim data-noescape>
-var packet = new IPv4Packet(data);
+const packet = new IPPacket(data);
 </code></pre>
 
 <aside class="notes">
