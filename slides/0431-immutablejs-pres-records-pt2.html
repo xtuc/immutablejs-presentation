@@ -6,13 +6,12 @@ class HttpResponse extends Immutable.Record({
 }) {
 
     constructor(content = "", status = 200, headers = []) {
-        super({
+
+        return super({
             statusCode: status,
             content: content,
             headers: Immutable.Map(headers)
         });
-
-        return this;
     }
 }
 </code></pre>
@@ -23,5 +22,5 @@ const foo = new HttpResponse("Page not found", 404, headers);
 </code></pre>
 
 <aside class="notes">
-    Un constructeur à été ajouté au record, la création de l'object reponse est simplifié. Record est aussi possible en es5. Valeur par défault dans le constructor es6 feature
+    Un constructeur à été ajouté au record, la création de l'object reponse est simplifié. Record est aussi possible en es5. Valeur par défault dans le constructor es6 feature. Super fait appel au contructeur du parent
 </aside>

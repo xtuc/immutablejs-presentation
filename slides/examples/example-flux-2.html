@@ -1,0 +1,27 @@
+<h4>Flux > Store</h4>
+
+<div class="flux_example">
+    <img src="slides/images/flux.png" alt="flux schema">
+</div>
+
+<pre><code class="js" data-trim data-noescape>
+this.messages = Immutable.List();
+</code></pre>
+
+<p>Nouveau message</p>
+
+<pre><code class="js" data-trim data-noescape>
+if(this.messages.contains(message1) === false) 
+    this.messages = this.messages.push(message1)
+</code></pre>
+
+<p>Supprimer un message</p>
+
+<pre><code class="js" data-trim data-noescape>
+if(this.messages.contains(message1) === false) 
+    this.messages = this.messages.filterNot(x => x === message1)
+</code></pre>
+
+<aside class="notes">
+    Check l'existance très simplement
+</aside>

@@ -1,50 +1,26 @@
 import Immutable from "immutable"
 
-var faker = require('faker');
-var sleep = require('sleep');
+var todoList = Immutable.List();
 
-const times = [];
-const iteration = 10000000;
+console.log(todoList.contains(1))
 
-function benchPlain(object) {
+// class todo extends Immutable.Record({
+// 	content: null
+// }) {
 
-	for (var i = 0; i < iteration; i++) {
-		const time = Date.now();
+// 	constructor(content = "") {
+// 		return super({ content: content });
+// 	}
+// }
 
-		/**
-		 * Operation
-		 */
-		object === (object[1] = 0)
+// const todo1 = new todo("1");
+// const todo2 = new todo("2");
 
-		times.push(Date.now() - time);
-	}
-}
+// todoList = todoList.push(todo1);
+// todoList = todoList.push(todo2);
 
-function benchImmutable(object) {
+// console.log(todoList.inspect());
 
-	for (var i = 0; i < iteration; i++) {
-		const time = Date.now();
+// todoList = todoList.filter(todo => todo !== todo1)
 
-		/**
-		 * Operation
-		 */
-		object.equals(object.set(1, 0))
-
-		times.push(Date.now() - time);
-	}
-}
-
-for (var i = 0; i < 100; i++) {
-	var object = {};
-
-	for (var i = 0; i < 1000; i++) {
-		object[i] = faker.hacker.noun(); 
-	}
-
-	benchPlain(object)
-	// benchImmutable(Immutable.fromJS(object))
-}
-
-const total = times.reduce((acc, e) => acc + e);
-
-console.log("bench %s s (%s iterations)", total / times.length * 1000, times.length / (1000 * 1000) + "M")
+// console.log(todoList.inspect());
