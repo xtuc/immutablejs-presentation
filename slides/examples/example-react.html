@@ -1,0 +1,18 @@
+<h4>React Component</h4>
+
+<pre><code class="js" data-trim data-noescape>
+class App extends React.Component {
+
+    shouldComponentUpdate (newProps, newState) {
+        return newState !== this.state;
+    }
+
+    render() {
+        return &#x3C;div&#x3E;Hi {this.state.name}&#x3C;/div&#x3E;;
+    }
+}
+</code></pre>
+
+<aside class="notes">
+    Le composant rendera uniquement si le state à réellement changé. La comparaison est rapide.
+</aside>
