@@ -2,17 +2,12 @@
 
 <pre><code class="js" data-trim data-noescape>
 const connectedUser = user
-        .flatten()
-        .filterNot((v, k) => k === "password")
-        .filter(v => v !== "Robert")
-        .map(x => (!x || x == "") ? "NA" : x)
-        .map(x => x.toUpperCase())
-        .map(x => (x.length > 5) ? x.substring(0, 1) + "." : x)
-        .set("foo", "bar")
-        .sort()
-        .join(" ")
+                        .filterNot((v, k) => k === "password")
+                        .map(x => x.toUpperCase())
+                        .set("foo", "bar")
+                        .sort()
 </code></pre>
 
 <aside class="notes">
-    On peut chainer nos appels
+    On peut chainer nos appels parce que chaque transformation returne une instance
 </aside>

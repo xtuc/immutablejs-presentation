@@ -3,12 +3,6 @@ Changes:
 - API, logger les objects inital.
 - Record sans extends .
 
-- CHAINEZ VOS TRANSFORMATIONS: moins de trasnfo.
-- Virer stack ARCHITECTURE FLUX -> plutot une ouverture
 - simplifier shcema structral sharing
 - Précisier COMPARE UNIQUEMENT LA RÉFÉRENCE
-- CONTRÔLER VOS EFFECTS DE BORDS -> non
-- Opérations basiques moins rapide -> Opérations basiques moins rapides
-- Virer les chiffres dans les perf (préciser chrome 47 (V8))
-- RÉSUMONS => faute
 - Implementation immutablejs (hash management : https://github.com/facebook/immutable-js/blob/master/src/Hash.js)
