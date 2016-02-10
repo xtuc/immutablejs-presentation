@@ -1,26 +1,8 @@
 import Immutable from "immutable"
+import { compose } from "transducers.js"
 
-var todoList = Immutable.List();
+const double = (x) => x * 2
+const increment = (x) => x + 1
 
-console.log(todoList.contains(1))
-
-// class todo extends Immutable.Record({
-// 	content: null
-// }) {
-
-// 	constructor(content = "") {
-// 		return super({ content: content });
-// 	}
-// }
-
-// const todo1 = new todo("1");
-// const todo2 = new todo("2");
-
-// todoList = todoList.push(todo1);
-// todoList = todoList.push(todo2);
-
-// console.log(todoList.inspect());
-
-// todoList = todoList.filter(todo => todo !== todo1)
-
-// console.log(todoList.inspect());
+const foo = Immutable.List.of(1,2,3);
+var a = foo.map(compose(double, increment));

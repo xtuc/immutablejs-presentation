@@ -1,0 +1,18 @@
+<h4>Composition de fonction</h4>
+
+<pre><code class="bash" data-trim data-noescape>
+npm install transducers.js
+</code></pre>
+
+<pre><code class="js" data-trim data-noescape>
+const double = (x) => x * 2
+const increment = (x) => x + 1
+</code></pre>
+
+<pre><code class="js" data-trim data-noescape>
+const bar = foo.map(compose(double, increment));
+</code></pre>
+
+<aside class="notes">
+	transducers.js est inspiré de Clojure. double et increment sont mes tranformations. C'est une approche fonctionnelle de la chose
+</aside>

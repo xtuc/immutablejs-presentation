@@ -1,0 +1,36 @@
+<pre><code class="js" data-trim data-noescape>
+const bar = foo.map(double).map(increment);
+</code></pre>
+
+<pre><code class="md" data-trim data-noescape>
+double(x)
+double(x)
+double(x)
+    …
+increment(x)
+increment(x)
+increment(x)
+    …
+</code></pre>
+
+<p>
+    vs
+</p>
+
+<pre><code class="js" data-trim data-noescape>
+const bar = foo.map(compose(double, increment));
+</code></pre>
+
+<pre><code class="md" data-trim data-noescape>
+increment(x)
+double(x)
+increment(x)
+double(x)
+increment(x)
+double(x)
+    …
+</code></pre>
+
+<aside class="notes">
+    Voici la stack de transformation
+</aside>
