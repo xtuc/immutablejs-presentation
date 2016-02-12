@@ -1,6 +1,4 @@
-<h3>Gain de performance</h3>
-
-<p>JS: Comparaison de valeurs</p>
+<p>ImmutableJS : comparaison de hash</p>
 
 <div class="row">
     <div class="col-md-6 col-xs-6">
@@ -23,9 +21,13 @@
 </div>
 
 <p style="color:black;">
-    Number("0") === Number("0") <br />
-    "foo".valueOf() === "bar".valueOf() <br />
+    -671355827 === -671355827
 </p>
+
+<pre><code class="js" data-trim data-noescape>
+foo.equals(bar)
+Immutable.is(foo, bar)
+</code></pre>
 
 <aside class="notes">
     <ul>
