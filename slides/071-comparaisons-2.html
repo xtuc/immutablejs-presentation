@@ -3,35 +3,26 @@
 <div class="row">
     <div class="col-md-6 col-xs-6">
     <pre><code class="js" data-trim data-noescape>
-{
-    a: "0",
-    b: "foo"
-}
+Immutable.Map({
+    a: "foo"
+})
     </code></pre>
     </div>
 
     <div class="col-md-6 col-xs-6">
     <pre><code class="js" data-trim data-noescape>
-{
-    a: "0",
-    b: "bar"
-}
+Immutable.Map({
+    a: "foo"
+})
     </code></pre>
     </div>
 </div>
 
 <p style="color:black;">
-    -671355827 === -671355827
+    -624228712 === -624228712
 </p>
 
 <pre><code class="js" data-trim data-noescape>
 foo.equals(bar)
 Immutable.is(foo, bar)
 </code></pre>
-
-<aside class="notes">
-    <ul>
-        <li>Comparaison de la spec (es5, es6)</li>
-        <li>Dans ce cas il va faire Number("0")</li>
-    </ul>
-</aside>

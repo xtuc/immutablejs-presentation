@@ -1,13 +1,12 @@
-<h3>Gain de performance</h3>
+<h3>Problème de comparaison</h3>
 
-<p>JS: Comparaison de valeurs</p>
+<p>JS: comparaison de référence</p>
 
 <div class="row">
     <div class="col-md-6 col-xs-6">
     <pre><code class="js" data-trim data-noescape>
 {
-    a: "0",
-    b: "foo"
+    a: "foo"
 }
     </code></pre>
     </div>
@@ -15,21 +14,18 @@
     <div class="col-md-6 col-xs-6">
     <pre><code class="js" data-trim data-noescape>
 {
-    a: "0",
-    b: "bar"
+    a: "foo"
 }
     </code></pre>
     </div>
 </div>
 
 <p style="color:black;">
-    Number("0") === Number("0") <br />
-    "foo".valueOf() === "bar".valueOf() <br />
+    adresse mémoire <strong>a</strong> !== adresse mémoire <strong>b</strong>
 </p>
 
 <aside class="notes">
     <ul>
-        <li>Comparaison de la spec (es5, es6)</li>
-        <li>Dans ce cas il va faire Number("0")</li>
+        <li>Un autre probleme de javascript. Comparaison d'object par leur référence</li>
     </ul>
 </aside>
