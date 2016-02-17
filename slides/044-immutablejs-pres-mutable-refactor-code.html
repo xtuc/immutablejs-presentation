@@ -3,7 +3,9 @@
 <pre><code class="js" data-trim data-noescape>
 const user = { firstname: "Dennis", lastname: "Ritchie" };
 
-user.firstname = "foo";
+const user1 = clone(user);
+
+user1.firstname = "foo";
 </code></pre>
 
 <p>
