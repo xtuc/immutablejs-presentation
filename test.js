@@ -1,27 +1,15 @@
-var Immutable = require("immutable")
+var Immutable = require("immutable");
 
-function Foo(str) { this.str = str; }
+var foo = { a: "a"};
 
-Foo.prototype.hashCode = function() {
-	return Math.random();
-}
+setTimeout(() => {
 
-Foo.prototype.equals = function(obj) {
-	return this.str === obj.str;
-}
+    console.log(foo.a); // "a" ?
 
-var test = new Foo("test");
+}, 1000);
 
-console.log(test.equals(new Foo("test")), "-->true");
 
-var bar = Immutable.Set.of(test)
+var badFonction = () =>
+    delete foo.a;
 
-console.log(bar.inspect())
-console.log(bar.contains(new Foo("test")));
-
-// var bar = new Foo("bar");
-
-// // console.log(bar.valueOf(), "hashCode", bar.hashCode);
-
-// console.log(bar.valueOf);
-// console.log(Immutable.is(bar, new Foo("bar")))
+badFonction()

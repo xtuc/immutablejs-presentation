@@ -1,0 +1,19 @@
+<h4>Null Pointer Exception</h4>
+
+<pre><code class="js" data-trim data-noescape>
+var foo = { a: "a"};
+
+setTimeout(() => {
+
+    console.log(foo.a); // "a" ?
+
+}, 1000);
+
+
+var badFonction = () =>
+    delete foo.a;
+</code></pre>
+
+<aside class="notes">
+    Je pensais que j'aurais "bar" dans foo lors de mon callback ...
+</aside>
